@@ -14,7 +14,11 @@
     "debug": "react-scripts start",
     "eject": "react-scripts eject",
     "start": "node scripts/node.js",
-    "test": "mocha tests"
+    "test": "mocha tests",
+    "serve": "concurrently \"npm run webpack-server-browser\" \"node scripts/node.js\"",
+    "server": "npm run webpack-server-browser & npm run webpack-node",
+    "webpack-server-browser": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./webpack.config.js --hot --port 8081",
+    "webpack-node": "./node_modules/webpack/bin/webpack.js --config ./webpack.server.config.js --progress --watch"
   },
   "keywords": [
     "bitcoin",
@@ -30,22 +34,34 @@
   "dependencies": {
     "@babel/core": "^7.17.5",
     "@fabric/core": "martindale/fabric#faucet",
-    "@fabric/http": "martindale/fabric-http#portal-develop",
+    "@fabric/http": "file:../fabric-http",
     "@octokit/core": "^3.5.1",
     "@reduxjs/toolkit": "^1.7.2",
+    "acorn": "^8.7.0",
     "bitcoinjs-lib": "^6.0.0",
-    "lodash.merge": "^4.6.2"
+    "concurrently": "^7.1.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "lodash.merge": "^4.6.2",
+    "react-hot-loader": "^4.13.0",
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "fomantic-ui": "^2.8.8",
     "fomantic-ui-css": "^2.8.8",
+    "html-webpack-plugin": "^5.5.0",
     "mocha": "^9.2.0",
+    "node-loader": "^2.0.0",
+    "postcss": "^8.4.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.1",
     "react-scripts": "4.0.3",
-    "semantic-ui-react": "^2.0.4"
+    "semantic-ui-react": "^2.0.4",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "browserslist": {
     "production": [

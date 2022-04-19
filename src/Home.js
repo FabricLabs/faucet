@@ -24,13 +24,13 @@ import {
   Visibility
 } from 'semantic-ui-react';
 
-import FabricComponent from './types/component';
+import FabricComponent from '@fabric/http';
 
-import FabricBridge from './components/FabricBridge';
-// import FabricDebugger from './components/FabricDebugger';
+import FabricBridge from '@fabric/http';
+// import FabricDebugger from '@fabric/http';
 
 import FaucetDripForm from './components/FaucetDripForm';
-// import FabricIdentityManager from './components/FabricIdentityManager';
+// import FabricIdentityManager from '@fabric/http';
 // import PortalMenu from './components/PortalMenu';
 
 class Home extends FabricComponent {
