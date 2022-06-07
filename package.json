@@ -9,8 +9,9 @@
   },
   "scripts": {
     "build": "npm run build:fomantic && npm run build:app",
-    "build:app": "react-scripts build && cp -r build/* assets",
-    "build:fomantic": "cd libraries/semantic && gulp build && cd ../../",
+    "build:app": "rollup -c",
+    "build:fomantic": "cd libraries/fomantic && npx gulp build && cp -r dist/themes ../../assets && cd ../..",
+    "build:semantic": "npm run build:fomantic",
     "debug": "react-scripts start",
     "eject": "react-scripts eject",
     "start": "node scripts/node.js",
@@ -32,21 +33,18 @@
   "author": "Fabric Labs",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.17.5",
-    "@octokit/core": "^3.5.1",
-    "@reduxjs/toolkit": "^1.7.2",
-    "acorn": "^8.7.0",
     "bitcoinjs-lib": "^6.0.0",
-    "concurrently": "^7.1.0",
-    "css-minimizer-webpack-plugin": "^3.4.1",
-    "lodash.merge": "^4.6.2",
-    "react-hot-loader": "^4.13.0"
+    "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.7.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "concurrently": "^7.1.0",
     "file-loader": "^6.2.0",
     "fomantic-ui": "^2.8.8",
     "fomantic-ui-css": "^2.8.8",
-    "html-webpack-plugin": "^5.5.0",
     "mocha": "^9.2.0",
     "node-loader": "^2.0.0",
     "postcss": "^8.4.8",
@@ -55,10 +53,9 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.1",
     "react-scripts": "^4.0.3",
-    "semantic-ui-react": "^2.0.4",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "rollup": "^2.74.1",
+    "rollup-plugin-import-css": "^3.0.3",
+    "semantic-ui-react": "^2.0.4"
   },
   "peerDependencies": {
     "@fabric/core": "FabricLabs/fabric#feature/node-16",

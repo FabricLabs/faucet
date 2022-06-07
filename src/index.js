@@ -25,7 +25,6 @@ import App from './App';
 // State
 import * as initialState from './settings/state';
 
-
 // const sagas = createSagaMiddleware();
 // sagas.run(RPCRequest);
 
