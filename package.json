@@ -13,11 +13,13 @@
     "build:fomantic": "cd libraries/fomantic && npx gulp build && cp -r dist/themes ../../assets && cd ../..",
     "build:semantic": "npm run build:fomantic",
     "debug": "react-scripts start",
+    "dev": "npx concurrently \"npm run watch\" \"npm start\"",
     "eject": "react-scripts eject",
     "start": "node scripts/node.js",
     "test": "mocha tests",
     "serve": "concurrently \"npm run webpack-server-browser\" \"node scripts/node.js\"",
     "server": "npm run webpack-server-browser & npm run webpack-node",
+    "watch": "rollup -c -w",
     "webpack-server-browser": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./webpack.config.js --hot --port 8081",
     "webpack-node": "./node_modules/webpack/bin/webpack.js --config ./webpack.server.config.js --progress --watch"
   },

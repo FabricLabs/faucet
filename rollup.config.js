@@ -17,7 +17,7 @@ function handleWarning (warning, warn) {
 
 const builds = [
   {
-    input: 'src/index.js',
+    input: 'scripts/index.js',
     output: [
       {
         file: 'assets/index.js',

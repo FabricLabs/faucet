@@ -2,7 +2,7 @@
 import * as defaults from './settings/state';
 
 // Dependencies
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { 
   recipientAddressClear, 
@@ -19,15 +19,15 @@ import {
   Visibility
 } from 'semantic-ui-react';
 
-import FabricComponent from '@fabric/http';
-import FabricBridge from '@fabric/http';
+// import FabricComponent from '@fabric/http';
+// import FabricBridge from '@fabric/http';
 // import FabricDebugger from '@fabric/http';
 
 import FaucetDripForm from './components/FaucetDripForm';
 // import FabricIdentityManager from '@fabric/http';
 // import PortalMenu from './components/PortalMenu';
 
-class Home extends FabricComponent {
+class Home extends Component {
   constructor (props) {
     super(props);
 
@@ -110,7 +110,7 @@ class Home extends FabricComponent {
                   </Card>
                   <Card fluid style={(this.state.debug) ? {} : { display: 'none' }}>
                     <Card.Content>
-                      <FabricBridge ref={this.bridge} remoteReady={this._handleRemoteReady.bind(this)} secure={this.state.secure} host={this.state.host} port={this.state.port} debug={this.state.debug} state={this.state} />
+                      {/* <FabricBridge ref={this.bridge} remoteReady={this._handleRemoteReady.bind(this)} secure={this.state.secure} host={this.state.host} port={this.state.port} debug={this.state.debug} state={this.state} /> */}
                     </Card.Content>
                   </Card>
                 </Container>

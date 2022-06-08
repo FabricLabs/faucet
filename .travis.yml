@@ -1,9 +1,3 @@
-jobs:
-  include:
-  - language: python
-    python: 3.8
-    script:
-    - npm run python-install
-  - language: node_js
-    node_js:
-      - 16.15.0
+language: node_js
+node_js:
+  - 16.15.0

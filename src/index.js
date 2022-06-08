@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 // import createSagaMiddleware from 'redux-saga';
 
 // Assets
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 // Components
@@ -23,7 +23,7 @@ import App from './App';
 // import sendToAnalytics from './functions/sendToAnalytics';
 
 // State
-import * as initialState from './settings/state';
+// import * as initialState from './settings/state';
 
 // const sagas = createSagaMiddleware();
 // sagas.run(RPCRequest);
@@ -40,6 +40,6 @@ ReactDOM.render(
 // TODO: enable Service Worker by disabling the line below, then test Fabric's
 // cache and the `@fabric/core/types/store` class — latest should be completely
 // isomorphic, so we're almost fully able to run in the browser now!
-serviceWorker.unregister();
+// serviceWorker.unregister();
 
 // reportWebVitals(sendToAnalytics);

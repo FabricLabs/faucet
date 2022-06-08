@@ -5,7 +5,7 @@
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Self-sovereign wallet & peer-to-peer exchange" />
+    <meta name="description" content="Generous benefactor service for Bitcoin" />
     <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="manifest" href="manifest.json" />
     <style type="text/css">
@@ -17,13 +17,14 @@
   </head>
   <body>
     <fabric-application id="browser">
-      <noscript>
-        <p>Unfortunately, you need to enable JavaScript enabled to run this app.  Please consider donating to our team to enable static-HTML hosting of our services:</p>
         <div class="ui card">
-          <div class="content"><i class="ui bitcoin icon"></i> <code><a href="bitcoin:bc1qkvj9zlycjdg3vna2606wlmgfw023wcjemudycx">bc1qkvj9zlycjdg3vna2606wlmgfw023wcjemudycx</a></code></div>
+          <div class="content">
+            <noscript>
+              <p>Unfortunately, you need to enable JavaScript enabled to run this app.</p>
+            </noscript>
+          </div>
         </div>
-      </noscript>
-      <div id="root"></div>
+      <fabric-react id="root"></fabric-react>
       <script src="index.js" type="text/javascript"></script>
     </fabric-application>
   </body>
