@@ -31,7 +31,7 @@ import {
   Button,
   Form,
   Input
-} from 'fomantic-ui-react';
+} from 'semantic-ui-react';
 
 // Internals
 // import FabricKeyPair from './FabricKeyPair';

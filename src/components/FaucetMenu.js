@@ -9,7 +9,7 @@ import {
 // Semantic Types
 import {
   Icon
-} from 'fomantic-ui-react';
+} from 'semantic-ui-react';
 
 // Components
 import FabricIdentity from './FabricIdentity';

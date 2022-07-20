@@ -20,7 +20,7 @@ import {
   Icon,
   Segment,
   Visibility
-} from 'fomantic-ui-react';
+} from 'semantic-ui-react';
 
 // import FabricComponent from '@fabric/http';
 // import FabricBridge from '@fabric/http';
