@@ -1,12 +1,12 @@
 {
   "env": {
-     "browser": true,
-     "commonjs": true,
-     "es6": true
+    "browser": true,
+    "commonjs": true,
+    "es6": true
   },
   "extends": [
-      "standard",
-      "standard-react"
+    "standard",
+    "standard-react"
   ],
   "globals": {
     "React": true,
@@ -22,10 +22,10 @@
   },
   "overrides": [
     {
-        "files": ["*.ts"],
-        "rules": {
-            "no-undef": "off"
-        }
+      "files": ["*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
     }
   ]
 }

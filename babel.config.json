@@ -20,7 +20,7 @@
       { "regenerator": true }
     ],
     [ "@babel/plugin-proposal-class-properties",
-      { loose: true }
+      { "loose": true }
     ],
     [
       "@babel/plugin-transform-react-jsx",
