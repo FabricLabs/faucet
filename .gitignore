@@ -1,3 +1,4 @@
 /config/index.js
 assets
 node_modules
+result*
