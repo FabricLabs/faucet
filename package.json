@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build:fomantic && npm run build:app",
     "build:app": "react-scripts build && cp -r build/* assets",
-    "build:nix": "node2nix --lock package-lock.json",
+    "build:nix": "node2nix --input package.json --lock package-lock.json",
     "build:fomantic": "cd libraries/semantic && gulp build && cd ../../",
     "clean": "npm run clean:lock && npm run clean:node",
     "clean:lock": "rm -rf package-lock.json",
