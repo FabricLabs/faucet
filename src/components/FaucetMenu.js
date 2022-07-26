@@ -1,6 +1,7 @@
 import merge from 'lodash.merge';
 
 import React, { Component } from 'react';
+window.React = React;
 import {
   Link
 } from 'react-router-dom';

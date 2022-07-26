@@ -1,5 +1,5 @@
 // Cryptography
-import { createHash } from 'crypto';
+// import createHash from 'create-hash';
 
 // Dependencies
 import * as bitcoin from 'bitcoinjs-lib';
@@ -7,6 +7,7 @@ import * as bitcoin from 'bitcoinjs-lib';
 // React
 import merge from 'lodash.merge';
 import React from 'react';
+window.React = React;
 import { connect } from 'react-redux';
 import { 
   recipientAddressClear, 
@@ -64,7 +65,7 @@ class FaucetDripForm extends FabricComponent {
         requests: []
       },
       requests: {},
-      secret: Actor.randomBytes(32), // solution hash (revealed on trade)
+      secret: Buffer.alloc(32), // solution hash (revealed on trade)
       status: 'LOADING'
     }, props.state);
 
@@ -164,8 +165,8 @@ class FaucetDripForm extends FabricComponent {
   }
 
   sync () {
-    const preimage = createHash('sha256').update(this.state.secret).digest('hex');
-    this.setState({ preimage: preimage });
+    // const preimage = createHash('sha256').update(this.state.secret).digest('hex');
+    // this.setState({ preimage: preimage });
     return this;
   }
 

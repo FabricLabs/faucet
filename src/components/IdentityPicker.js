@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+window.React = React;
 import { Icon, Form, Button } from 'semantic-ui-react';
 
 class IdentityPicker extends Component {

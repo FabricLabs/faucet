@@ -1,5 +1,6 @@
 'use strict';
 
+const React = require('react');
 const settings = require('../settings/local');
 
 const Node = require('@fabric/core/types/node');

@@ -9,6 +9,7 @@ module.exports = {
     authority: 'http://ahp7iuGhae8mooBahFaYieyaixei6too:naiRe9wo5vieFayohje5aegheenoh4ee@localhost:20444'
   },
   http: {
-    port: 7222
+    port: 7222,
+    secure: false
   }
 };

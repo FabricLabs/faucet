@@ -1,5 +1,6 @@
 'use strict';
 
+const React = require('react');
 // Dependencies
 const merge = require('lodash.merge');
 

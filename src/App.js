@@ -1,9 +1,10 @@
 // Dependencies
-import * as state from './settings/state';
+// import * as state from './settings/state';
 import * as merge from 'lodash.merge';
 
 // React
-import React from 'react';
+import React, { Component } from 'react';
+window.React = React;
 import { store } from './app/store'
 
 import {
@@ -32,14 +33,14 @@ import './index.css';
 
 // Fabric Types
 import Actor from '@fabric/core/types/actor';
-import FabricComponent from '@fabric/http';
+// import FabricComponent from '@fabric/http';
 
 // Fabric Components
-import FabricBridge from '@fabric/http';
-import FabricDebugger from '@fabric/http';
+// import FabricBridge from '@fabric/http';
+// import FabricDebugger from '@fabric/http';
 // import FabricIdentityManager from '@fabric/http';
 // import FabricNodeList from '@fabric/http';
-import FabricTransactionList from '@fabric/http';
+// import FabricTransactionList from '@fabric/http';
 
 // Portal
 import Home from './Home';
@@ -47,7 +48,7 @@ import Home from './Home';
 /**
  * The Portal web application.
  */
-class App extends FabricComponent {
+class App extends Component {
   constructor (settings) {
     super(settings);
 
@@ -81,7 +82,7 @@ class App extends FabricComponent {
           <div className='pusher'>
             <Routes>
               <Route path='/' exact element={<Home state={this.state} balances={this.state.balances} keys={this.state.keys} host={this.state.host} />} />
-              <Route path='/transactions' element={<FabricTransactionList state={this.state} balances={this.state.balances} keys={this.state.keys} />} />
+              {/* <Route path='/transactions' element={<FabricTransactionList state={this.state} balances={this.state.balances} keys={this.state.keys} />} /> */ }
             </Routes>
             {/*
             <Segment className='ui inverted vertical footer segment'>

@@ -1,7 +1,8 @@
 import merge from 'lodash.merge';
 import * as bip39 from 'bip39';
 // import * as Wallet from '@fabric/core/types/wallet';
-import React, { Component } from 'react';
+import React from 'react';
+window.React = React;
 
 // Components
 import {
@@ -14,7 +15,7 @@ import {
   // Segment
 } from 'semantic-ui-react';
 
-class SeedEntryForm extends Component {
+class SeedEntryForm extends React.Component {
   constructor (props) {
     super(props);
 

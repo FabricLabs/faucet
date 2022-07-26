@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import * as toolkit from '@reduxjs/toolkit'
 
 import * as initialState from '../../settings/state';
 
-export const faucetSlice = createSlice({
+export const faucetSlice = toolkit.createSlice({
   name: 'faucet',
   initialState,
   reducers: {
