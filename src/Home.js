@@ -7,30 +7,24 @@ import { connect } from 'react-redux';
 import { 
   recipientAddressClear, 
   recipientAddressUpdate, 
-  statusUpdate } from './features/faucet/faucetSlice';
-import {
-  Link
-} from 'react-router-dom';
+  statusUpdate
+} from './features/faucet/faucetSlice';
 
 // Components
 import {
   Card,
   Container,
-  Divider,
   Icon,
-  // Grid,
-  // Menu,
   Segment,
   Visibility
 } from 'semantic-ui-react';
 
-import FabricComponent from './types/component';
-
-import FabricBridge from './components/FabricBridge';
-// import FabricDebugger from './components/FabricDebugger';
+import FabricComponent from '@fabric/http';
+import FabricBridge from '@fabric/http';
+// import FabricDebugger from '@fabric/http';
 
 import FaucetDripForm from './components/FaucetDripForm';
-// import FabricIdentityManager from './components/FabricIdentityManager';
+// import FabricIdentityManager from '@fabric/http';
 // import PortalMenu from './components/PortalMenu';
 
 class Home extends FabricComponent {
@@ -62,9 +56,9 @@ class Home extends FabricComponent {
   onSubmit (e) {
     const self = this;
 
-    this.props.statusUpdate("LOADING");
-      // this.form.current.setState({ status: 'LOADING' });
-      // this.button.current.setState({ status: 'REQUESTING'});
+    this.props.statusUpdate('LOADING');
+    // this.form.current.setState({ status: 'LOADING' });
+    // this.button.current.setState({ status: 'REQUESTING'});
 
     const address = this.props.state.recipient;
     const message = {
@@ -79,6 +73,7 @@ class Home extends FabricComponent {
       console.log('Message to send over bridge:', message);
       console.log(`submitting address ${address}`);
     }
+
     setTimeout(function () {
       if (address != '') {
         self.props.statusUpdate('REQUESTING');
