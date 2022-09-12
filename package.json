@@ -29,8 +29,8 @@
   "author": "Eric Martindale",
   "license": "MIT",
   "dependencies": {
-    "@fabric/core": "FabricLabs/fabric#feature/federation",
-    "@fabric/http": "FabricLabs/fabric-http#feature/federation",
+    "@fabric/core": "FabricLabs/fabric#master",
+    "@fabric/http": "martindale/fabric-http#eric/develop",
     "bitcoinjs-lib": "^6.0.0",
     "ecpair": "^2.0.1",
     "lodash.merge": "^4.6.2"
