@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build:fomantic && npm run build:app",
     "build:app": "react-scripts build && cp -r build/* assets",
-    "build:nix": "node2nix --nodejs-12 --input package.json --lock package-lock.json",
+    "build:nix": "node2nix --nodejs-16 --input package.json --lock package-lock.json",
     "build:fomantic": "cd libraries/semantic && gulp build && cd ../../",
     "clean": "npm run clean:lock && npm run clean:node",
     "clean:lock": "rm -rf package-lock.json",
@@ -29,8 +29,8 @@
   "author": "Eric Martindale",
   "license": "MIT",
   "dependencies": {
-    "@fabric/core": "FabricLabs/fabric#feature/federation",
-    "@fabric/http": "FabricLabs/fabric-http#feature/federation",
+    "@fabric/core": "FabricLabs/fabric#master",
+    "@fabric/http": "martindale/fabric-http#eric/develop",
     "bitcoinjs-lib": "^6.0.0",
     "ecpair": "^2.0.1",
     "lodash.merge": "^4.6.2"
