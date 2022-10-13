@@ -10,6 +10,7 @@ async function main (input = {}) {
     service: BitFaucet,
     settings: input
   });
+
   await node.start();
   return node.id;
 }
